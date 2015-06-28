@@ -3,6 +3,33 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <item name="arrowPbStyle">@style/arrowPbDefaultStyle</item>
+    </style>
+
+    <!-- define attribute for ArrowPb -->
+    <declare-styleable name="ArrowPb">
+        <attr name="progressColor" format="color"/>
+        <attr name="backgroundColor" format="color"/>
+        <attr name="backgroundStyle" format="enum">
+            <enum name="stroke" value="0"/>
+            <enum name="fill" value="1"/>
+        </attr>
+        <attr name="bgDashInterval" format="dimension"/>
+        <attr name="max" format="integer"/>
+        <attr name="progress" format="integer"/>
+
+    </declare-styleable>
+
+    <!-- define style reference for ArrowPb -->
+    <attr name="arrowPbStyle" format="reference"/>
+
+    <style name="arrowPbDefaultStyle">
+        <item name="backgroundColor">@android:color/holo_blue_light</item>
+        <item name="progressColor">@android:color/holo_red_light</item>
+        <item name="backgroundStyle">stroke</item>
+        <item name="bgDashInterval">5dp</item>
+        <item name="max">100</item>
+        <item name="progress">50</item>
     </style>
 
 </resources>
